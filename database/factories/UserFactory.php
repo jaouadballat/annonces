@@ -23,3 +23,22 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\City::class, function(Faker $faker) {
+	return [
+		'name' => $faker->city
+	];
+});
+
+$factory->define(App\Company::class, function(Faker $faker) {
+	return [
+		'name' => $faker->company,
+		'city_id' => \App\City::get()->random()->id,
+		'category_id' => \App\Category::get()->random()->id,
+		'address' => $faker->address,
+		'description' => $faker->text(100),
+		'logo' => 'logo.jpg'
+	];
+});
+
+
