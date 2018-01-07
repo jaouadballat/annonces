@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/category/{id}', 'HomeController@category')->name('category');
 
 
 Route::group(['prefix' => 'admin'], function () {

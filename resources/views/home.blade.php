@@ -152,7 +152,7 @@
 									<h4>{{ $category->name }}</h4>
 								</div>
 								<ul class="category-list" >
-									@foreach($category->companies as $company)
+									@foreach($category->companies->take(2) as $company)
 										<li><a href="category.html">{{ $company->name }} </a></li>
 									@endforeach
 							</div>

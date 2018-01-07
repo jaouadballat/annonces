@@ -11,4 +11,9 @@ class Company extends Model
     {
     	return $this->belongsTo('App\Category');
     }
+
+    public function city()
+    {
+    	return $this->belongsTo('App\City');
+    }
 }
