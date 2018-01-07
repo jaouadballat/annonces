@@ -2480,6 +2480,10 @@ article.single-post p {
   text-decoration: none;
 }
 
+.category-block{
+  height: 100% !important;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
 
 
