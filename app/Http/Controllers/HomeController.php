@@ -25,4 +25,10 @@ class HomeController extends Controller
         $city = \App\City::find($id);
         return view('city', compact('city'));
     }
+
+    public function company($id)
+    {
+        $company = \App\Company::find($id);
+        return view('company', compact('company'));
+    }
 }
