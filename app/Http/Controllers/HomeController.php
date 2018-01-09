@@ -19,4 +19,10 @@ class HomeController extends Controller
     	$category = \App\Category::with('companies')->find($id);
     	return view('category', compact('category'));
     }
+
+    public function city($id)
+    {
+        $city = \App\City::find($id);
+        return view('city', compact('city'));
+    }
 }

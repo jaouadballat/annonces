@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/category/{id}', 'HomeController@category')->name('category');
+Route::get('/city/{id}', 'HomeController@city')->name('city');
 
 
 Route::group(['prefix' => 'admin'], function () {
