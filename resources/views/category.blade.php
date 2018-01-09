@@ -43,18 +43,18 @@
 					<div class="card">
 						<div class="thumb-content">
 							<!-- <div class="price">$200</div> -->
-							<a href="">
+							<a href="{{ route('company', ['id' => $company->id]) }}">
 								<img class="card-img-top img-fluid" src="{{ Storage::url($company->logo) }}">
 							</a>
 						</div>
 						<div class="card-body">
-						    <h4 class="card-title"><a href="">{{ $company->name }}</a></h4>
+						    <h4 class="card-title"><a href="{{ route('company', ['id' => $company->id]) }}">{{ $company->name }}</a></h4>
 						    <ul class="list-inline product-meta">
 						    	<li class="list-inline-item">
-						    		<a href=""><i class="{{ $company->category->icon }}"></i>{{ $company->category->name }}</a>
+						    		<a href="{{ route('category', ['id' => $company->category->id]) }}"><i class="{{ $company->category->icon }}"></i>{{ $company->category->name }}</a>
 						    	</li>
 						    	<li class="list-inline-item">
-						    		<a href=""><i class="fa fa-calendar"></i>{{ $company->created_at->toFormattedDateString() }}</a>
+						    		<a href="{{ route('company', ['id' => $company->id]) }}"><i class="fa fa-calendar"></i>{{ $company->created_at->toFormattedDateString() }}</a>
 						    	</li>
 						    </ul>
 						    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, aliquam!</p>
