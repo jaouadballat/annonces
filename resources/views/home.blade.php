@@ -28,12 +28,12 @@
 				</div>
 				<!-- Advance Search -->
 				<div class="advance-search">
-					<form action="#">
+					<form action="{{ route('search') }}" method="get">
 						<div class="row">
 							<!-- Store Search -->
 							<div class="col-lg-3 col-md-12">
 								<div class="block d-flex">
-									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Search for company">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" name="company" placeholder="Search for company">
 								</div>
 							</div>
 							<div class="col-lg-3 col-md-12">
@@ -49,7 +49,7 @@
 							</div>
 							<div class="col-lg-3 col-md-12">
 								<div class="block d-flex">
-									<select class="form-control mb-2 mr-sm-2 mb-sm-0" name="category">
+									<select class="form-control mb-2 mr-sm-2 mb-sm-0" name="city">
 										<option value="">Select City</option>
 										@foreach($cities as $city)
 											<option value="{{ $city->id }}">{{ $city->name }}</option>

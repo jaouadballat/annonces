@@ -31,4 +31,11 @@ class HomeController extends Controller
         $company = \App\Company::find($id);
         return view('company', compact('company'));
     }
+
+    public function search(Request $request)
+    {
+        $companies = \App\Company::searchCompany()->get();
+        return view('search', compact('companies'));
+
+   }
 }
